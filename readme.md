@@ -1,4 +1,6 @@
 # Leeloo LXP Subscriptions List Block
++This block allows admin to show the Leeloo LXP subscription plans in Moodle, they can sell whatever subscription they have on Leeloo LXP. the purchase process happens inside popup so user dont leave the moodle site. 
+
 
 Installation Instructions
 =========================
