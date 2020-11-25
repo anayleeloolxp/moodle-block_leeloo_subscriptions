@@ -15,19 +15,16 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Version details
+ * Moodle Get settings from L
  *
- * @package   block_leeloo_subscriptions
+ * @package    block_leeloo_subscriptions
  * @copyright  2020 Leeloo LXP (https://leeloolxp.com)
  * @author     Leeloo LXP <info@leeloolxp.com>
- * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-defined('MOODLE_INTERNAL') || die();
+require('../../config.php');
 
-$plugin->version = 2019010700; // The current plugin version (Date: YYYYMMDDXX).
-$plugin->requires = 2018050800; // Requires this Moodle version.
-$plugin->component = 'block_leeloo_subscriptions'; // Full name of the plugin (used for diagnostics).
-$plugin->maturity = MATURITY_STABLE;
-$plugin->release = 'v1.6.0';
-$plugin->cron = 60*5; //5mins.
+require_once($CFG->libdir . '/filelib.php');
+require_once($CFG->dirroot . '/blocks/leeloo_subscriptions/locallib.php');
+updateconfleeloo_subscriptions();
