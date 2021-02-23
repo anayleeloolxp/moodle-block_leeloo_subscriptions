@@ -101,11 +101,14 @@ class block_leeloo_subscriptions extends block_base {
         ];
 
         $url = $leelooapibaseurl . 'get_subscription_by_licensekey.php';
-        $postdata = '&license_key=' . $encryptlicensekey;
+        $postdata = [
+            'license_key' => $encryptlicensekey,
+        ];
         $curl = new curl;
         $options = array(
             'CURLOPT_RETURNTRANSFER' => true,
-            'CURLOPT_POSTFIELDS' => $post,
+            'CURLOPT_HEADER' => false,
+            'CURLOPT_POST' => count($postdata),
         );
 
         if (!$output = $curl->post($url, $postdata, $options)) {
