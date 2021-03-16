@@ -76,6 +76,15 @@ class block_leeloo_subscriptions extends block_base {
         $leeloolxplicense = get_config('block_leeloo_subscriptions')->license;
         $settingsjson = get_config('block_leeloo_subscriptions')->settingsjson;
         $resposedata = json_decode(base64_decode($settingsjson));
+
+        if (!isset($resposedata->data->subscription_data)) {
+            $this->title = get_string('displayname', 'block_leeloo_subscriptions');
+            $this->content = new stdClass();
+            $this->content->text = '';
+            $this->content->footer = '';
+            return $this->content;
+        }
+
         $settingleeloolxp = $resposedata->data->subscription_data;
 
         if (empty($settingleeloolxp->sub_block_title)) {

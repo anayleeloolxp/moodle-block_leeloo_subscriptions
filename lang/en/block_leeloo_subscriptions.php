@@ -37,4 +37,4 @@ $string['buy'] = 'Subscribe for ';
 $string['nolicense'] = 'Invalid Leeloo LXP License ID';
 $string['license'] = 'Leeloo LXP License ID';
 
-$string['privacy:metadata'] = 'The Leeloo LXP Subscriptions (leeloo_subscriptions) block only shows information about Subscriptions and does not store data itself.';
+$string['privacy:metadata'] = 'The Leeloo LXP Subscriptions (leeloo_subscriptions) block only shows information and does not store data itself.';
