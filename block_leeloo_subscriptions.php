@@ -215,12 +215,4 @@ class block_leeloo_subscriptions extends block_base {
     public function applicable_formats() {
         return array('all' => true);
     }
-
-    /**
-     * Get settings from Leeloo
-     */
-    public function cron() {
-        require_once($CFG->dirroot . '/blocks/leeloo_subscriptions/lib.php');
-        updateconfleeloo_subscriptions();
-    }
 }
