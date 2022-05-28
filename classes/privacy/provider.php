@@ -25,8 +25,6 @@
 
 namespace block_leeloo_subscriptions\privacy;
 
-defined('MOODLE_INTERNAL') || die();
-
 /**
  * Privacy Subsystem for block_leeloo_subscriptions implementing null_provider.
  *
