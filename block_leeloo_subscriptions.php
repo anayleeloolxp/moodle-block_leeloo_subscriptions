@@ -89,7 +89,13 @@ class block_leeloo_subscriptions extends block_base {
         if (empty($settingleeloolxp->sub_block_title)) {
             $settingleeloolxp->sub_block_title = get_string('displayname', 'block_leeloo_subscriptions');
         }
-        $this->title = $settingleeloolxp->sub_block_title;
+
+        $summaryformatoptions = new stdClass();
+        $summaryformatoptions->noclean = false;
+        $summaryformatoptions->overflowdiv = false;
+        $summaryformatoptions->filter = true;
+
+        $this->title = format_text($settingleeloolxp->sub_block_title, 1, $summaryformatoptions);
 
         $productsarr = explode(',', $settingleeloolxp->sub_product_id);
 
